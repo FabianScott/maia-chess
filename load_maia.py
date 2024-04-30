@@ -1,6 +1,6 @@
 
 def load_maia_network(elo, lc0_path=None, models_dir_path=None, time_limit=None, parent=''):
-    from move_prediction.maia_chess_backend import load_model_config
+    from .move_prediction.maia_chess_backend import load_model_config
 
     valid_elos = [str(el) for el in range(1100, 2000, 100)]
     assert str(elo) in valid_elos, f"Invalid elo value: {elo}, model does not exist. Valid elos are: {valid_elos}"
