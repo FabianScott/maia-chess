@@ -200,7 +200,9 @@ class LC0Engine(TourneyEngine):
         self.threads = threads
         self.noise = noise
         self.verbose = verbose
-        engine = chess.engine.SimpleEngine.popen_uci([self.lc0Path, f'--weights={weightsPath}', f'--threads={threads}', f'--backend={backend}', f'--backend-opts={backend_opts}', f'--temperature={temperature}', f'--tempdecay-moves={temp_decay}'] + (['--noise'] if self.noise else []) + ([f'--noise-epsilon={noise}'] if isinstance(self.noise, float) else [])+ (['--verbose-move-stats'] if self.verbose else []) + (extra_flags if extra_flags is not None else []), stderr=subprocess.DEVNULL)
+        engine = chess.engine.SimpleEngine.popen_uci([self.lc0Path, f'--weights={weightsPath}', f'--threads={threads}',
+                                                      #f'--backend={backend}',
+                                                      f'--backend-opts={backend_opts}', f'--temperature={temperature}', f'--tempdecay-moves={temp_decay}'] + (['--noise'] if self.noise else []) + ([f'--noise-epsilon={noise}'] if isinstance(self.noise, float) else [])+ (['--verbose-move-stats'] if self.verbose else []) + (extra_flags if extra_flags is not None else []), stderr=subprocess.DEVNULL)
 
         if name is None:
             name = f"{os.path.basename(self.weightsPath)[:-6]} {movetime}"
