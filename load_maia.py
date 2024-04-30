@@ -1,5 +1,16 @@
 
 def load_maia_network(elo, lc0_path=None, models_dir_path=None, time_limit=None, parent=''):
+    """
+    Loads maia network given an elo value and paths
+    Specifying the parent variable is necessary if
+    running this as a package and should eg. be called
+    'maia_chess/' 
+    :param elo: elo
+    :param lc0_path:
+    :param models_dir_path:
+    :param time_limit:
+    :param parent:
+    """
     from .move_prediction.maia_chess_backend import load_model_config
 
     valid_elos = [str(el) for el in range(1100, 2000, 100)]
