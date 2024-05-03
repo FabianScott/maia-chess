@@ -1,5 +1,6 @@
 training/
 validation/
+!test/output_trainingdata/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

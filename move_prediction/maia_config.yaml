@@ -3,8 +3,8 @@
 gpu: 0
 
 dataset:
-  input_train: 'PATH_TO_TRAINING_FILES' # This uses glob so training/*/* is probably the end
-  input_test: 'PATH_TO_VAL_FILES' # This uses glob so validate/*/* is probably the end
+  input_train: '.\test_example\test\output_trainingdata\training\*\*' # This uses glob so training/*/* is probably the end
+  input_test: '.\test\output_trainingdata\validation\*\*' # This uses glob so validate/*/* is probably the end
 
 training:
     precision: 'half'
