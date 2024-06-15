@@ -415,5 +415,5 @@ TSWLatexianTemp*
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
 
-lc0-exe-folder
+lc0-exe-folder/*
 .idea
